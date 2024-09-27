@@ -1,0 +1,97 @@
+/* Header: Flexbox layout with space between for larger screens */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically */
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Links: Flex layout and padding for larger screens */
+a {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    font-size: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Navigation: Flexbox layout for larger screens */
+.navvv {
+    display: flex;
+    justify-content: space-around;
+    width: max-content;
+}
+
+/* Search input: Set a default width for larger screens */
+.form-control {
+    width: 100%;
+}
+
+.carousel .slide{
+    width: 100%;
+}
+
+.carousel {
+    max-height: 450px; /* Adjust the height as needed */
+}
+
+.carousel-inner img {
+    height: 450px; /* Matches the carousel height */
+}
+
+/* Media query for smaller screens (optional) */
+@media (max-width: 768px) {
+    /* Further reduce carousel height for smaller screens */
+    .carousel {
+        max-height: 300px;
+    }
+
+    .carousel-inner img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce carousel height for very small screens */
+    .carousel {
+        max-height: 250px;
+    }
+
+    .carousel-inner img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        font-size: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: row;
+    }
+
+    .form-control {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
+        flex-direction: row;
+    }
+
+    /* Search input takes more space on very small screens */
+    .form-control {
+        width: 100%;
+    }
+}
