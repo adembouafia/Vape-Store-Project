@@ -1,3 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgba(227, 225, 225, 0.677);
+}
+
 /* Header: Flexbox layout with space between for larger screens */
 header {
     display: flex;
@@ -94,4 +103,21 @@ a {
     .form-control {
         width: 100%;
     }
+}
+
+.card11 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers cards in the container */
+    flex-wrap: wrap; /* Ensures cards wrap to the next line if necessary */
+    width: 80%; /* Set a specific width for the container */
+    margin: 50px auto; /* Centers the container itself */
+    gap: 30px; /* Space between cards */
+}
+
+.card {
+    flex: 0 1 calc(33.333% - 20px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 25px;
 }
